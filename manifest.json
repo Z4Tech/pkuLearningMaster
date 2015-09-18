@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "北大学霸",
+  "description": "披着学霸的外衣",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "128.png"
+  },
+  "icons": { "32": "32.png",
+             "48": "48.png",
+            "256": "256.png",
+            "128": "128.png" },
+  "permissions" : [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://dean.pku.edu.cn/student/*", "https://dean.pku.edu.cn/student/*"],
+      "js": ["jquery.js" ,"myscript.js"]
+    }
+  ]
+}
